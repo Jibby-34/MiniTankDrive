@@ -17,8 +17,10 @@ public final class Constants {
   public static final int kDriverControllerPort = 0;
 
   // DIO
-  public static final int LEFT_DRIVE_ENCODER_PORT = 0;
-  public static final int RIGHT_DRIVE_ENCODER_PORT = 1;
+  public static final int LEFT_DRIVE_ENCODER_PORT_A = 0;
+  public static final int LEFT_DRIVE_ENCODER_PORT_B = 1;
+  public static final int RIGHT_DRIVE_ENCODER_PORT_A = 2;
+  public static final int RIGHT_DRIVE_ENCODER_PORT_B = 3;
 
   // PWM
   public static final int LEFT_DRIVE_MOTOR_PORT = 0;

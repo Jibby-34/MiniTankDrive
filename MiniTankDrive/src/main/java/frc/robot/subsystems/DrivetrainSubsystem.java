@@ -6,6 +6,10 @@ package frc.robot.subsystems;
 
 import java.beans.Encoder;
 
+import edu.wpi.first.math.estimator.DifferentialDrivePoseEstimator;
+import edu.wpi.first.math.geometry.Pose2d;
+import edu.wpi.first.math.geometry.Rotation2d;
+import edu.wpi.first.math.kinematics.DifferentialDriveKinematics;
 import edu.wpi.first.wpilibj.PWM;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.motorcontrol.MotorController;
@@ -22,6 +26,11 @@ public class DrivetrainSubsystem extends SubsystemBase {
   PWMSparkMax leftMotor = new PWMSparkMax(Constants.LEFT_DRIVE_MOTOR_PORT);
   PWMSparkMax rightMotor = new PWMSparkMax(Constants.LEFT_DRIVE_MOTOR_PORT);
   DifferentialDrive drivetrain = new DifferentialDrive(leftMotor, rightMotor);
+  // TODO: Build the robot and figure out trackwidth
+  DifferentialDriveKinematics kinematics = new DifferentialDriveKinematics(0.25);
+
+  // Configure placeholder PoseEstimator
+  DifferentialDrivePoseEstimator  poseEstimator = new DifferentialDrivePoseEstimator(kinematics, new Rotation2d(), 0, 0, new Pose2d(0, 0, new Rotation2d()));
 
   public DrivetrainSubsystem() {
 
