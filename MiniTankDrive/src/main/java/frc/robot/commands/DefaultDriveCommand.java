@@ -16,7 +16,7 @@ public class DefaultDriveCommand extends Command{
         this.drivetrainSubsystem = drivetrainSubsystem;
     }
 
-    @Override
+    /*@Override
     public void execute() {
         drivetrainSubsystem.drive(leftSupplier.getAsDouble(), rightSupplier.getAsDouble());
     }
@@ -24,7 +24,7 @@ public class DefaultDriveCommand extends Command{
     @Override
     public void end(boolean interrupted) {
         drivetrainSubsystem.drive(0, 0);
-    }
+    }*/
 
 
     
